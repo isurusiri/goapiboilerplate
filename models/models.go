@@ -12,6 +12,6 @@ type User struct {
 	CreatedAt time.Time          `bson:"created_at"`
 	UpdatedAt time.Time          `bson:"updated_at"`
 	Username  string             `bson:"username"`
-	email     string             `bson:"email"`
-	isActive  bool               `bson:"is_active"`
+	Email     string             `bson:"email"`
+	IsActive  bool               `bson:"is_active"`
 }
