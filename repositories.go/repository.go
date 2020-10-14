@@ -79,3 +79,16 @@ func Delete(ctx context.Context, collection *mongo.Collection, userID primitive.
 
 	return result.DeletedCount, nil
 }
+
+// FindOne returns a user identified by user id
+func FindOne(ctx context.Context, collection *mongo.Collection, userID primitive.ObjectID) (models.User, error) {
+	filter := bson.D{primitive.E{Key: "_id", Value: userID}}
+
+	var user models.User
+	err := collection.FindOne(ctx, filter).Decode(&user)
+	if err != nil {
+		return user, err
+	}
+
+	return user, nil
+}
