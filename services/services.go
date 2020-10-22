@@ -1,7 +1,13 @@
 package services
 
+import (
+	"github.com/isurusiri/goapiboilerplate/dto"
+)
+
 // Create a new instance of the dto being passed.
-func Create() {}
+func Create(newUser dto.UserDto) {
+
+}
 
 // GetAll returns all instances of an entity type.
 func GetAll() {}
