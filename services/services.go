@@ -2,11 +2,16 @@ package services
 
 import (
 	"github.com/isurusiri/goapiboilerplate/dto"
+	"github.com/isurusiri/goapiboilerplate/models"
 )
 
 // Create a new instance of the dto being passed.
 func Create(newUser dto.UserDto) {
-
+	user := models.User{
+		Username: newUser.Username,
+		Email:    newUser.Email,
+		IsActive: newUser.IsActive,
+	}
 }
 
 // GetAll returns all instances of an entity type.
